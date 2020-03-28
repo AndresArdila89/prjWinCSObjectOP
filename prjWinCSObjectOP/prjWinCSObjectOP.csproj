@@ -46,6 +46,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="clsTime.cs" />
+    <Compile Include="frmClass2Struct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmClass2Struct.Designer.cs">
+      <DependentUpon>frmClass2Struct.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmStrucToClass.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -54,6 +61,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmClass2Struct.resx">
+      <DependentUpon>frmClass2Struct.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmStrucToClass.resx">
       <DependentUpon>frmStrucToClass.cs</DependentUpon>
     </EmbeddedResource>

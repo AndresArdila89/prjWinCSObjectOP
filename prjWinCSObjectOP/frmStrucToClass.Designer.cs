@@ -31,10 +31,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lblHour = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtHour = new System.Windows.Forms.TextBox();
+            this.txtMinutes = new System.Windows.Forms.TextBox();
             this.lblMinute = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtSeconds = new System.Windows.Forms.TextBox();
             this.lblSecond = new System.Windows.Forms.Label();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnCreate = new System.Windows.Forms.Button();
@@ -60,11 +60,11 @@
             this.groupBox1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.groupBox1.Controls.Add(this.btnCreate);
             this.groupBox1.Controls.Add(this.btnClear);
-            this.groupBox1.Controls.Add(this.textBox3);
+            this.groupBox1.Controls.Add(this.txtSeconds);
             this.groupBox1.Controls.Add(this.lblSecond);
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.txtMinutes);
             this.groupBox1.Controls.Add(this.lblMinute);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txtHour);
             this.groupBox1.Controls.Add(this.lblHour);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(45, 98);
@@ -84,21 +84,21 @@
             this.lblHour.TabIndex = 2;
             this.lblHour.Text = "Enter Hour :";
             // 
-            // textBox1
+            // txtHour
             // 
-            this.textBox1.ForeColor = System.Drawing.Color.Red;
-            this.textBox1.Location = new System.Drawing.Point(113, 33);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(128, 20);
-            this.textBox1.TabIndex = 3;
+            this.txtHour.ForeColor = System.Drawing.Color.Red;
+            this.txtHour.Location = new System.Drawing.Point(113, 33);
+            this.txtHour.Name = "txtHour";
+            this.txtHour.Size = new System.Drawing.Size(128, 20);
+            this.txtHour.TabIndex = 3;
             // 
-            // textBox2
+            // txtMinutes
             // 
-            this.textBox2.ForeColor = System.Drawing.Color.Red;
-            this.textBox2.Location = new System.Drawing.Point(113, 61);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(128, 20);
-            this.textBox2.TabIndex = 5;
+            this.txtMinutes.ForeColor = System.Drawing.Color.Red;
+            this.txtMinutes.Location = new System.Drawing.Point(113, 61);
+            this.txtMinutes.Name = "txtMinutes";
+            this.txtMinutes.Size = new System.Drawing.Size(128, 20);
+            this.txtMinutes.TabIndex = 5;
             // 
             // lblMinute
             // 
@@ -110,13 +110,13 @@
             this.lblMinute.TabIndex = 4;
             this.lblMinute.Text = "Enter Minute :";
             // 
-            // textBox3
+            // txtSeconds
             // 
-            this.textBox3.ForeColor = System.Drawing.Color.Red;
-            this.textBox3.Location = new System.Drawing.Point(113, 90);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(128, 20);
-            this.textBox3.TabIndex = 7;
+            this.txtSeconds.ForeColor = System.Drawing.Color.Red;
+            this.txtSeconds.Location = new System.Drawing.Point(113, 90);
+            this.txtSeconds.Name = "txtSeconds";
+            this.txtSeconds.Size = new System.Drawing.Size(128, 20);
+            this.txtSeconds.TabIndex = 7;
             // 
             // lblSecond
             // 
@@ -145,6 +145,7 @@
             this.btnCreate.TabIndex = 9;
             this.btnCreate.Text = "Create or Adjust";
             this.btnCreate.UseVisualStyleBackColor = true;
+            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
             // btnDisplayUniversal
             // 
@@ -155,6 +156,7 @@
             this.btnDisplayUniversal.TabIndex = 10;
             this.btnDisplayUniversal.Text = "Display in Universal >>";
             this.btnDisplayUniversal.UseVisualStyleBackColor = true;
+            this.btnDisplayUniversal.Click += new System.EventHandler(this.btnDisplayUniversal_Click);
             // 
             // btnDisplayStandard
             // 
@@ -199,6 +201,7 @@
             this.Controls.Add(this.label1);
             this.Name = "frmStrucToClass";
             this.Text = "frmStrucToClass";
+            this.Load += new System.EventHandler(this.frmStrucToClass_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -212,11 +215,11 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnCreate;
         private System.Windows.Forms.Button btnClear;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtSeconds;
         private System.Windows.Forms.Label lblSecond;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtMinutes;
         private System.Windows.Forms.Label lblMinute;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtHour;
         private System.Windows.Forms.Label lblHour;
         private System.Windows.Forms.Button btnDisplayUniversal;
         private System.Windows.Forms.Button btnDisplayStandard;
