@@ -30,14 +30,14 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.lblHour = new System.Windows.Forms.Label();
-            this.txtHour = new System.Windows.Forms.TextBox();
-            this.txtMinutes = new System.Windows.Forms.TextBox();
-            this.lblMinute = new System.Windows.Forms.Label();
+            this.btnCreate = new System.Windows.Forms.Button();
+            this.btnClear = new System.Windows.Forms.Button();
             this.txtSeconds = new System.Windows.Forms.TextBox();
             this.lblSecond = new System.Windows.Forms.Label();
-            this.btnClear = new System.Windows.Forms.Button();
-            this.btnCreate = new System.Windows.Forms.Button();
+            this.txtMinutes = new System.Windows.Forms.TextBox();
+            this.lblMinute = new System.Windows.Forms.Label();
+            this.txtHour = new System.Windows.Forms.TextBox();
+            this.lblHour = new System.Windows.Forms.Label();
             this.btnDisplayUniversal = new System.Windows.Forms.Button();
             this.btnDisplayStandard = new System.Windows.Forms.Button();
             this.lblStandard = new System.Windows.Forms.TextBox();
@@ -74,41 +74,24 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "New Appointment";
             // 
-            // lblHour
+            // btnCreate
             // 
-            this.lblHour.AutoSize = true;
-            this.lblHour.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHour.Location = new System.Drawing.Point(15, 37);
-            this.lblHour.Name = "lblHour";
-            this.lblHour.Size = new System.Drawing.Size(76, 13);
-            this.lblHour.TabIndex = 2;
-            this.lblHour.Text = "Enter Hour :";
+            this.btnCreate.Location = new System.Drawing.Point(113, 123);
+            this.btnCreate.Name = "btnCreate";
+            this.btnCreate.Size = new System.Drawing.Size(128, 32);
+            this.btnCreate.TabIndex = 9;
+            this.btnCreate.Text = "Create or Adjust";
+            this.btnCreate.UseVisualStyleBackColor = true;
+            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
-            // txtHour
+            // btnClear
             // 
-            this.txtHour.ForeColor = System.Drawing.Color.Red;
-            this.txtHour.Location = new System.Drawing.Point(113, 33);
-            this.txtHour.Name = "txtHour";
-            this.txtHour.Size = new System.Drawing.Size(128, 20);
-            this.txtHour.TabIndex = 3;
-            // 
-            // txtMinutes
-            // 
-            this.txtMinutes.ForeColor = System.Drawing.Color.Red;
-            this.txtMinutes.Location = new System.Drawing.Point(113, 61);
-            this.txtMinutes.Name = "txtMinutes";
-            this.txtMinutes.Size = new System.Drawing.Size(128, 20);
-            this.txtMinutes.TabIndex = 5;
-            // 
-            // lblMinute
-            // 
-            this.lblMinute.AutoSize = true;
-            this.lblMinute.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMinute.Location = new System.Drawing.Point(15, 65);
-            this.lblMinute.Name = "lblMinute";
-            this.lblMinute.Size = new System.Drawing.Size(87, 13);
-            this.lblMinute.TabIndex = 4;
-            this.lblMinute.Text = "Enter Minute :";
+            this.btnClear.Location = new System.Drawing.Point(12, 123);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(95, 32);
+            this.btnClear.TabIndex = 8;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = true;
             // 
             // txtSeconds
             // 
@@ -128,24 +111,41 @@
             this.lblSecond.TabIndex = 6;
             this.lblSecond.Text = "Enter Second :";
             // 
-            // btnClear
+            // txtMinutes
             // 
-            this.btnClear.Location = new System.Drawing.Point(12, 123);
-            this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(95, 32);
-            this.btnClear.TabIndex = 8;
-            this.btnClear.Text = "Clear";
-            this.btnClear.UseVisualStyleBackColor = true;
+            this.txtMinutes.ForeColor = System.Drawing.Color.Red;
+            this.txtMinutes.Location = new System.Drawing.Point(113, 61);
+            this.txtMinutes.Name = "txtMinutes";
+            this.txtMinutes.Size = new System.Drawing.Size(128, 20);
+            this.txtMinutes.TabIndex = 5;
             // 
-            // btnCreate
+            // lblMinute
             // 
-            this.btnCreate.Location = new System.Drawing.Point(113, 123);
-            this.btnCreate.Name = "btnCreate";
-            this.btnCreate.Size = new System.Drawing.Size(128, 32);
-            this.btnCreate.TabIndex = 9;
-            this.btnCreate.Text = "Create or Adjust";
-            this.btnCreate.UseVisualStyleBackColor = true;
-            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
+            this.lblMinute.AutoSize = true;
+            this.lblMinute.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMinute.Location = new System.Drawing.Point(15, 65);
+            this.lblMinute.Name = "lblMinute";
+            this.lblMinute.Size = new System.Drawing.Size(87, 13);
+            this.lblMinute.TabIndex = 4;
+            this.lblMinute.Text = "Enter Minute :";
+            // 
+            // txtHour
+            // 
+            this.txtHour.ForeColor = System.Drawing.Color.Red;
+            this.txtHour.Location = new System.Drawing.Point(113, 33);
+            this.txtHour.Name = "txtHour";
+            this.txtHour.Size = new System.Drawing.Size(128, 20);
+            this.txtHour.TabIndex = 3;
+            // 
+            // lblHour
+            // 
+            this.lblHour.AutoSize = true;
+            this.lblHour.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHour.Location = new System.Drawing.Point(15, 37);
+            this.lblHour.Name = "lblHour";
+            this.lblHour.Size = new System.Drawing.Size(76, 13);
+            this.lblHour.TabIndex = 2;
+            this.lblHour.Text = "Enter Hour :";
             // 
             // btnDisplayUniversal
             // 
@@ -167,6 +167,7 @@
             this.btnDisplayStandard.TabIndex = 11;
             this.btnDisplayStandard.Text = "Display in Standard >>";
             this.btnDisplayStandard.UseVisualStyleBackColor = true;
+            this.btnDisplayStandard.Click += new System.EventHandler(this.btnDisplayStandard_Click);
             // 
             // lblStandard
             // 

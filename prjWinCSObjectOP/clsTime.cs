@@ -10,23 +10,60 @@ namespace prjWinCSObjectOP
     {
         //Public properties
 
-        public Int16 Hour;
-        public Int16 Minutes;
-        public Int16 Seconds;
+        private Int16 vHour;
+        private Int16 vMinutes;
+        private Int16 vSeconds;
+
+
+        //public properties as a function to be able to do validation
+
+        public Int16 Hour
+        {
+            get
+            {
+                return vHour;
+            }
+            set
+            {
+                vHour = value;
+            }
+        }
+
+
+
 
         //Public Methods or functions
 
         public string ToUniversal()
         {
-            string info = $"{Hour}:{Minutes}:{Seconds}";
+            string info = $"{vHour}:{vMinutes}:{vSeconds}";
             return info;
         }
 
-        public void Adjust(Int16 aHour, Int16 aMinute, Int16 aSecond)
+        public string ToStandard()
         {
-            Hour = aHour;
-            Minutes = aMinute;
-            Seconds = aSecond;
+            string dayNight;
+            Int16 fixHour = 0;
+            if (Hour >= 12)
+            {
+                dayNight = "PM";
+                fixHour = ((Hour > 12) ? (Int16)(Hour - 12) : Hour);
+            }
+            else
+            {
+                dayNight = "AM";
+                fixHour = Hour;
+            }
+
+            string info = $"{fixHour}:{vMinutes}:{vSeconds} {dayNight}";
+            return info;
+        }
+
+        public void Adjust(string aHour, string aMinute, string aSecond)
+        {
+            vHour = Convert.ToInt16(aHour);
+            vMinutes = Convert.ToInt16(aMinute);
+            vSeconds = Convert.ToInt16(aSecond);
         }
     }
 }

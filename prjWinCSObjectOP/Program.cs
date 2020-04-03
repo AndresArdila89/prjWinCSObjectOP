@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace prjWinCSObjectOP
@@ -16,7 +13,7 @@ namespace prjWinCSObjectOP
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmClass2Struct());
+            Application.Run(new frmTest());
         }
     }
 }

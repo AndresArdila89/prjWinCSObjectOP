@@ -41,6 +41,28 @@ namespace prjWinCSObjectOP
             return info;
         }
 
+        private string DisplayStandad(Time anyTime)
+        {
+            string dayNight;
+            if (anyTime.Hours >= 12)
+            {
+                dayNight = "PM";
+
+                if(anyTime.Hours > 12)
+                {
+                    anyTime.Hours = Convert.ToInt16( anyTime.Hours - 12);
+                }
+            }
+            else
+            {
+                dayNight = "AM";
+            }
+                
+            String info = $"{ anyTime.Hours}:{anyTime.Minuts}:{anyTime.Seconds} {dayNight}";
+
+            return info;
+        }
+
         private void frmStrucToClass_Load(object sender, EventArgs e)
         {
 
@@ -58,6 +80,11 @@ namespace prjWinCSObjectOP
         private void btnDisplayUniversal_Click(object sender, EventArgs e)
         {
             lblUniversal.Text = DisplayUniversal(current);
+        }
+
+        private void btnDisplayStandard_Click(object sender, EventArgs e)
+        {
+            lblStandard.Text = DisplayStandad(current);
         }
     }
 }

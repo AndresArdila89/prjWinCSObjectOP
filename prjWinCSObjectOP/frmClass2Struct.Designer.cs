@@ -74,6 +74,7 @@
             this.btnDisplayStandard.TabIndex = 17;
             this.btnDisplayStandard.Text = "Display in Standard >>";
             this.btnDisplayStandard.UseVisualStyleBackColor = true;
+            this.btnDisplayStandard.Click += new System.EventHandler(this.btnDisplayStandard_Click);
             // 
             // btnDisplayUniversal
             // 
@@ -84,6 +85,7 @@
             this.btnDisplayUniversal.TabIndex = 16;
             this.btnDisplayUniversal.Text = "Display in Universal >>";
             this.btnDisplayUniversal.UseVisualStyleBackColor = true;
+            this.btnDisplayUniversal.Click += new System.EventHandler(this.btnDisplayUniversal_Click);
             // 
             // groupBox1
             // 
@@ -112,6 +114,7 @@
             this.btnCreate.TabIndex = 9;
             this.btnCreate.Text = "Create or Adjust";
             this.btnCreate.UseVisualStyleBackColor = true;
+            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
             // btnClear
             // 
@@ -199,7 +202,7 @@
             this.Controls.Add(this.label1);
             this.Name = "frmClass2Struct";
             this.Text = "frmClass2Struct";
-            this.Load += new System.EventHandler(this.frmClass2Struct_Load);
+            
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

@@ -16,14 +16,22 @@ namespace prjWinCSObjectOP
         {
             InitializeComponent();
         }
+        clsTime current = new clsTime();
 
-        private void frmClass2Struct_Load(object sender, EventArgs e)
+        private void btnCreate_Click(object sender, EventArgs e)
         {
-            clsTime current = new clsTime();
+            current.Adjust(txtHour.Text, txtMinutes.Text, txtSeconds.Text);
+        }
 
-            current.Adjust(15, 30, 20);
+        private void btnDisplayUniversal_Click(object sender, EventArgs e)
+        {
+            lblUniversal.Text = current.ToUniversal();
 
-            MessageBox.Show(current.ToUniversal());
+        }
+
+        private void btnDisplayStandard_Click(object sender, EventArgs e)
+        {
+            lblStandard.Text = current.ToStandard();
         }
     }
 }
